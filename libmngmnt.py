@@ -1,19 +1,3 @@
-
-# Create a library class
-# display book
-# lend book - (who owns the book if not present)
-# add book
-# return book
-
-# HarryLibrary = Library(listofbooks, library_name)
-
-
-#dictionary (books-nameofperson)
-
-# create a main function and run an infinite while loop asking
-# users for their input
-
-
 class Library:
     def __init__(self, list, name):
         self.booksList = list
@@ -41,10 +25,10 @@ class Library:
 
 if __name__ == '__main__':
     l1=['Python', 'Rich Daddy Poor Daddy', 'Harry Potter', 'C++ Basics', 'Algorithms by CLRS']
-    harry = Library(l1, "CodeWithHarry")
+    rishi= Library(l1, "Rishi's Library")
 
     while(True):
-        print(f"Welcome to the {harry.name} library. Enter your choice to continue")
+        print(f"Welcome to the {rishi.name} library. Enter your choice to continue")
         print("1. Display Books")
         print("2. Lend a Book")
         print("3. Add a Book")
@@ -59,20 +43,20 @@ if __name__ == '__main__':
 
 
         if user_choice == 1:
-            harry.displayBooks()
+            rishi.displayBooks()
 
         elif user_choice == 2:
             book = input("Enter the name of the book you want to lend:")
             user = input("Enter your name")
-            harry.lendBook(user, book)
+            rishi.lendBook(user, book)
 
         elif user_choice == 3:
             book = input("Enter the name of the book you want to add:")
-            harry.addBook(book)
+            rishi.addBook(book)
 
         elif user_choice == 4:
             book = input("Enter the name of the book you want to return:")
-            harry.returnBook(book)
+            rishi.returnBook(book)
 
         else:
             print("Not a valid option")
